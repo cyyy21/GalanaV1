@@ -103,7 +103,7 @@ const [,token] = auth.split(' '); //skip the bearer  only get the token
 
 const payload = await jwt.verify(token,secretKey);
 res.status(200).json({
-  message:`Hello ${payload.userName}`
+  message:`${payload.userName}`
 })
 
   } catch (error) {
@@ -111,18 +111,11 @@ res.status(200).json({
   }
 })
 //get UserInfo : 
-app.get('/userInfo', async (req,res)=> {
-try {
- 
-  const data = await User.find()
+app.get('/users', async (req,res) => {
+  const users = await User.find();
   res.status(200).json({
-    data:data
-  });
-
-} catch (error) {
-  console.log(error)
-  res.status(500).json({ message:'internal server error' })
-}
+    message:users
+  })
 })
 
 app.listen(PORT, () => {

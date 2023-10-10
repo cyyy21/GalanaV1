@@ -11,29 +11,20 @@ import { useEffect, useState } from "react";
 function Home() {
 const [getUser, setUser] = useState([]);
 
-
-
-
 const fetchUser = async () => {
- 
-
-  const response = await fetch('http://localhost:3000/userInfo');
+  const response = await fetch('http://localhost:3000/users');
   const {data} = await response.json();
   setUser(data);
-  
 }
 
 useEffect(()=>{
   fetchUser();
 },[])
 
-const user = localStorage.getItem('userId'); //get the decode token 
+const User = localStorage.getItem('userID');
 
-const getName = getUser.filter((udata)=> {
-  if(udata._id === user) {
-    return udata;
-  }
-})
+
+
   return (
     <div>
       <header></header>
@@ -43,14 +34,10 @@ const getName = getUser.filter((udata)=> {
   <div className="profile">
           <img src={Profile} alt="profile" className="profileImg" />
 {/* not rendering the userName */}
-          <div> <FaUserAlt/>{getName.map(uName => uName.userName)}</div> 
+          <div> <FaUserAlt/>{User}</div> 
        <Link to='/home'> <div> <FaHome/> Home</div> </Link>   
           <Link to="/login"> <div><FiLogOut/>Log out</div> </Link>
         </div>
-
-
- 
-
 
         <div className="blogPost">
 
