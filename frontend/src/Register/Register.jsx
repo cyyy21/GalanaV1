@@ -76,8 +76,8 @@ catch (error) {
     return (
         <div>
             <div id="containerForm">
-            <form onSubmit={handleSubmit} id="loginForm">
-<h1>Register</h1>
+            <form onSubmit={handleSubmit} id="registerForm">
+<h1 >Register</h1>
             {error && <p className="errorMessage">{error}</p>}
 
            <input type="text" id="userName" placeholder="Username" onChange={(e)=> setUname(e.target.value)} />
@@ -88,7 +88,7 @@ catch (error) {
            <br/>
            <button type="submit">Submit</button>
 <br /> 
-            <p>Already have an account ? <Link to={'/login'}>Login</Link></p>
+            <p>Already have an account ? <Link to={'/login'} id="linkLogin">Login</Link></p>
            </form>
         </div>
         </div>

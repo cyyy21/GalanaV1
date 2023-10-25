@@ -5,10 +5,11 @@ import Postpic from '/Profile/boracay.png';
 import {FaUserAlt,FaImage,FaHome} from 'react-icons/fa'
 
 import {FiLogOut} from 'react-icons/fi'
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
 
 function Home() {
+  /*
 const [getUser, setUser] = useState([]);
 
 const fetchUser = async () => {
@@ -20,6 +21,7 @@ const fetchUser = async () => {
 useEffect(()=>{
   fetchUser();
 },[])
+*/
 
 const User = localStorage.getItem('userID');
 
@@ -32,11 +34,12 @@ const User = localStorage.getItem('userID');
     
   
   <div className="profile">
+   
           <img src={Profile} alt="profile" className="profileImg" />
 {/* not rendering the userName */}
-          <div> <FaUserAlt/>{User}</div> 
-       <Link to='/home'> <div> <FaHome/> Home</div> </Link>   
-          <Link to="/login"> <div><FiLogOut/>Log out</div> </Link>
+          <div> <FaUserAlt/>  {User}</div> 
+       <Link to='/home'> <div> <FaHome/>  Home</div> </Link>   
+          <Link to="/login"> <div><FiLogOut/>  Log out</div> </Link>
         </div>
 
         <div className="blogPost">

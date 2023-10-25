@@ -1,25 +1,59 @@
+
 #containerForm {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     height: 100vh;
+    color: #fff;
+background-color: #fff;
+background-repeat: no-repeat;
+background-image: url('https://images.unsplash.com/photo-1682905926517-6be3768e29f0?auto=format&fit=crop&q=80&w=2574&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
 }
-
-#loginForm input {
+#registerForm>h1{
+    font-size: 3.5em;
+    
+}
+#registerForm input {
     text-align: center;
-    height: 25px;
-border-radius: 5px;
-    padding: 5px;
-    align-items: center;
+    height:25px;
     margin: 15px;
+    border:1px solid #6dc6f9;
+    padding: 17px;
+    background-color: #efebef;
+    
 }
-#loginForm button {
-    height: 30px;
+#registerForm button {
+    height: 39px;
     width: 50%;
-    border-radius: 55px;
+    border-radius: 10px;
+    background-color: #6dc6f9;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom:55px;
+    font-weight: bold;
+}
+#registerForm {
+    border: 2px solid #efebef;
+    background-color: rgba(0.2, 0.2, 0.2, 0.2);
+    padding: 120px;
+
+}
+#registerForm>h1{
+    color: #6dc6f9;
+}
+#containerForm p{
+    font-size: 18px;
+}
+#linkLogin{
+    color: #6dc6f9;
+    text-decoration: none;
+}
+#linkLogin:hover{
+    text-decoration: underline;
 }
 .errorMessage {
     color: red;
     font-size: 15px;
+
 }

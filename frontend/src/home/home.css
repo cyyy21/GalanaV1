@@ -20,19 +20,25 @@ margin: 10px;
 .profile {
     width: 30%;
     height: 100vh;
-    border: 2px solid;
+box-shadow: 2px 2px solid;
 text-align: center;
 background-color: #efebeb;
+
 }
 .profile div {
-    margin: 55px;
+    margin: 95px;
+justify-content: space-around;
+font-size: 19px;
+display: flex;
     align-items: center;
+    color: black;
+
 }
 
 .blogPost {
     width :85%;
     height: 100vh;
-    border:2px solid;
+
     display:inline-block;
     justify-content: center;
   overflow: scroll;

@@ -7,7 +7,9 @@ function Login() {
   // Define state variables
   const [userName, setUName] = useState('');
   const [password, setPword] = useState('');
-  const [userData, setUserData] = useState([]);
+
+  localStorage.removeItem('userID');
+  localStorage.removeItem('token')
 
 
   const submit = async (e) => {
@@ -59,9 +61,11 @@ function Login() {
   
   
   return (
+    
     <div id='bodyLogin'>
+     
       <div id='formContainer'>
-        <h1>Welcome to Galana</h1>
+        <h1>Galana</h1>
         <form onSubmit={submit}>
           <input
             type='text'
@@ -81,7 +85,7 @@ function Login() {
           <button type="submit">Login</button>
         </form>
         <p>
-          Don't Have an Account? <Link to={'/'}>Sign Up</Link>
+          Don`t Have an Account? <Link to={'/'} id='linkSignUp'>Sign Up</Link>
         </p>
       </div>
     </div>
